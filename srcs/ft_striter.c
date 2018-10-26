@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/24 18:51:59 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/25 16:49:40 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/23 15:42:34 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/23 15:44:09 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
-# include "libft.h"
-# include <stdio.h>
+#include "libft.h"
 
-void	ft_testmem1(const char *s, char *test, void *null, int result);
-void	ft_teststr1(const char *s, char *test, void *null, int result);
-void	ft_testoddities(void);
-void	ft_testmem2(void);
-
-#endif
+void	ft_striter(char *s, void (*f)(char *))
+{
+	while (*s)
+	{
+		f(s);
+		s++;
+	}
+}
