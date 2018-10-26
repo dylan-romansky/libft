@@ -6,22 +6,20 @@
 #    By: dromansk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 14:53:52 by dromansk          #+#    #+#              #
-#    Updated: 2018/10/24 16:18:56 by dromansk         ###   ########.fr        #
+#    Updated: 2018/10/26 15:06:45 by dromansk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libft_test
 
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Werror -Wextra -I *.c -c
-	ar rcs $(NAME) *.o
+	gcc -Wall -Werror -Wextra -I *.c
 
 clean:
-	rm -rf *.o
+	rm -rf a.out
 
 fclean: clean
-	rm -rf $(NAME)
 
 re: fclean all
