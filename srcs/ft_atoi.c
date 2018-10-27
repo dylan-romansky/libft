@@ -26,7 +26,12 @@ int		ft_atoi(const char *str)
 		neg = -1;
 		str++;
 	}
-	while ('0' <= *str && *str <= '9')
-		nb = (10 * nb) + (*(str++) + '0');
-	return (nb * neg);
+	if ('0' <= *str && *str <= '9')
+	{	
+		while ('0' <= *str && *str <= '9')
+			nb = (10 * nb) + (*(str++) - '0');
+		return (nb * neg);
+	}
+	else
+		ft_atoi(str);
 }
