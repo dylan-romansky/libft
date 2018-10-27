@@ -6,30 +6,11 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 21:28:13 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/25 21:16:42 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/26 15:15:05 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-
-int		ft_atoi(const char *str)
-{
-	int neg;
-	int nb;
-
-	neg = 1;
-	nb = 0;
-	while (*str != '-' && !('0' <= *str && *str < '9'))
-		str++;
-	if (*str == '-')
-	{
-		neg = -1;
-		str++;
-	}
-	while ('0' <= *str && *str <= '9')
-		nb = (10 * nb) + (*(str++) + '0');
-	return (nb * neg);
-}
 
 void	ft_testoddities(void)
 {
