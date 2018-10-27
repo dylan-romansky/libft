@@ -38,16 +38,18 @@ void	ft_teststr1(const char *s, char *t)
 	printf("strcat: 'fuck', 'shit;'\n %s\n did that work?\n", ft_strcat(*test, "shit"));
 //strncat
 	test2 = ft_strcpy(test2, "fuck");
-	printf("strncat: 'fuck', 'eratic', 2\n %s\n", ft_strncat("fuck", "eratic", 2));
+	printf("strncat: 'fuck', 'eratic', 2\n %s\n", ft_strncat(*test, "eratic", 2));
 //strlcat
 	ft_strcpy(test2, "fuck");
-	printf("strlcat: %s, %d\n", *test, (int)ft_strlcat(*test, "er", 9));
+	printf("strlcat: src is shorter than size:\n 'fuck', 'er', 9\n %s, %d\n", *test, (int)ft_strlcat(*test, "er", 9));
+	ft_strcpy(test2, "fuck");
+	printf("strlcat: src is longer than size:\n 'fuck', 'bitches', 6\n %s, %d\n", *test, (int)ft_strlcat(*test, "bitches", 6));
 //strchr
-	printf("strchr: %s\n what it do?\n", ft_strchr("lmfao", 'f'));
+	printf("strchr: 'lmfao', 'a'\n %s\n should say ao\n", ft_strchr("lmfao", 'a'));
 //strrchr
-	printf("strrchr: %s\n what they say?", ft_strrchr("aaayy lmao", 'a'));
+	printf("strrchr:'aaayy lmao', 'a'\n %s\n should say o\n", ft_strrchr("aaayy lmao", 'a'));
 //strstr
-	printf("strstr: huberjubernub, jub:\n %s\n", ft_strstr("huberjubernub", "jub"));
+	printf("strstr: huberjubernub, jub:\n %s\n should say jubernub\n", ft_strstr("huberjubernub", "jub"));
 	printf("strstr:\n needle doesn't exist: 'funday', ''\n %s\n should say funday\n", ft_strstr("funday", ""));
 	printf("strstr: needle can't be found:\n 'needle', 'haystack':\n %s\n should be null\n", ft_strstr("haystack", "needle"));
 //strnstr
