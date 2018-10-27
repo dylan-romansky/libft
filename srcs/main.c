@@ -16,9 +16,7 @@ int		main(void)
 {
 	const char *s = "6969";
 	char 		*test;
-	void		*null;
 
-	null = NULL;
 	test = (char *)malloc(sizeof(char) * 5);
 	write(1, "Testing functions...\n", 21);
 	ft_testmem1(s, test);

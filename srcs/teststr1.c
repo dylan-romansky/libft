@@ -15,7 +15,6 @@
 void	ft_teststr1(const char *s, char *t)
 {
 	char	**test;
-	char	*test2;
 
 	test = &t;
 //strlen
