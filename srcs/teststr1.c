@@ -15,6 +15,7 @@
 void	ft_teststr1(const char *s, char *t)
 {
 	char	**test;
+	char	*test2;
 
 	test = &t;
 //strlen
@@ -32,12 +33,11 @@ void	ft_teststr1(const char *s, char *t)
 	printf("strncpy: longer: \n %s\n what happens?", ft_strncpy(*test, "fucker", 6));
 	test2 = (char *)malloc(sizeof(char) * 9);
 //strcat
-	//test2 = ft_strcat(
 	printf("strcat: %s\n did that work?\n", ft_strcat("fuck", "shit"));
 //strncat
 	printf("strncat: %s\n", ft_strncat("fuck", "eratic", 2));
 //strlcat
-	ft_strcpy(*test, "fuck");
+	ft_strcpy(test2, "fuck");
 	printf("strlcat: %s, %d\n", *test, (int)ft_strlcat(*test, "er", 9));
 //strchr
 	printf("strchr: %s\n what it do?\n", ft_strchr("lmfao", 'f'));
