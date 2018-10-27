@@ -30,12 +30,15 @@ void	ft_teststr1(const char *s, char *t)
 //strncpy
 	printf("strncpy: same size:\n %s\n does it say fuck?\n", ft_strncpy(*test, "fuck", 4));
 	printf("strncpy: shorter:\n %s\n does it say fu?\n", ft_strncpy(*test, "fuck", 2));
-	printf("strncpy: longer: \n %s\n what happens?", ft_strncpy(*test, "fucker", 6));
+	printf("strncpy: longer: \n %s\n what happens?\n", ft_strncpy(*test, "fucker", 6));
 	test2 = (char *)malloc(sizeof(char) * 9);
+	test2 = ft_strcpy(test2, "fuck");
+	test = &test2;
 //strcat
-	printf("strcat: %s\n did that work?\n", ft_strcat("fuck", "shit"));
+	printf("strcat: 'fuck', 'shit;'\n %s\n did that work?\n", ft_strcat(*test, "shit"));
 //strncat
-	printf("strncat: %s\n", ft_strncat("fuck", "eratic", 2));
+	test2 = ft_strcpy(test2, "fuck");
+	printf("strncat: 'fuck', 'eratic', 2\n %s\n", ft_strncat("fuck", "eratic", 2));
 //strlcat
 	ft_strcpy(test2, "fuck");
 	printf("strlcat: %s, %d\n", *test, (int)ft_strlcat(*test, "er", 9));
