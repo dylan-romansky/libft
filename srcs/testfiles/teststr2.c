@@ -42,7 +42,7 @@ void		ft_teststr2(void)
 	printf("strnew: making string...  address: %p\n", s);
 	t = &s;
 //strdel
-	ft_strcpy(*t, "tttt");
+	ft_memset(*t, 't', 4);
 	printf("writing to string...\n contents: %s", *t);
 	printf("strdel: deleting string '%s'... ", *t);
 	ft_strdel(t);
