@@ -19,7 +19,7 @@ void	ft_teststr1(const char *s, char *t)
 
 	test = &t;
 //strlen
-	printf("strlen:\n %d\n will it be 4 or 5?\n", (int)ft_strlen(s));
+	printf("strlen:\n %s, %d\n will it be 4 or 5?\n", s, (int)ft_strlen(s));
 //strdup
 	*test = ft_strdup(s);
 	printf("strdup:\n %s\n should be 6969\n", *test);
