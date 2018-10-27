@@ -14,74 +14,22 @@
 
 void	ft_testoddities(void)
 {
+//atoi
 	printf("atoi:\n positives:\n input: 1234\n result: %d\n", ft_atoi("1234"));
 	printf(" negatives:\n input: -1234\n result: %d\n", ft_atoi("-1234"));
-	printf(" odd cases: input: -0, jag24, 69gds, $()_+- z\n results: %d %d %d %d\n", ft_atoi("-0"), ft_atoi("jag24"), ft_atoi("69gds"), ft_atoi("$()_+- z"));
-	printf("isalpha:\n input: a, 0\n result: ");
-	if (ft_isalpha('a') == 1)
-		printf("yes,");
-	else
-		printf("failure,");
-	if (ft_isalpha('0') == 0)
-		printf(" no\n");
-	else
-		printf(" failure\n");
-	printf("isdigit:\n input: a, 0\n result: ");
-	if (ft_isdigit('a' == 1))
-		printf("no, ");
-	else
-		printf("failure, ");
-	if (ft_isdigit('0') == 0)
-		printf("yes\n");
-	else
-		printf("failure\n");
-	printf("isalnum:\n input: a, 0, -\n result: ");
-	if (ft_isalnum('a') == 1)
-		printf("yes, ");
-	else
-		printf("failure, ");
-	if (ft_isalnum('0') == 1)
-		printf("yes, ");
-	else
-		printf("failure, ");
-	if (ft_isalnum('-') == 0)
-		printf("no\n");
-	else
-		printf("failure\n");
-	printf("isascii:\n input: 'a', '8', 188,'-'\n result: ");
-	if (ft_isascii('a') == 1)
-		printf("yes, ");
-	else
-		printf("failure, ");
-	if (ft_isascii('8') == 1)
-		printf("yes, ");
-	else
-		printf("failure, ");
-	if (ft_isascii(188) == 0)
-		printf("no, ");
-	else
-		printf("failure, ");
-	if (ft_isascii('-') == 1)
-		printf("yes\n");
-	else
-		printf("failure");
-	printf("isprint:\n input: 10, 48, newline, ' '\n result: ");
-	if (ft_isprint(10) == 0)
-		printf("no, ");
-	else
-		printf("failure, ");
-	if (ft_isprint(48) == 1)
-		printf("yes, ");
-	else
-		printf("failure, ");
-	if (ft_isprint('\n') == 0)
-		printf("no, ");
-	else
-		printf("failure, ");
-	if (ft_isprint(' ') == 1)
-		printf("yes\n");
-	else
-		printf("failure\n");
+	printf(" odd cases: input: -0, jag24, 69gds, $()_+- z, jaf-fgs-69420\n results: %d, %d, %d, %d, %d\n", ft_atoi("-0"), ft_atoi("jag24"), ft_atoi("69gds"), ft_atoi("$()_+- z"), ft_atoi("jaf-fgs-69420"));
+//isalpha
+	printf("isalpha:\n input: a, 0\n output: %d, %d\n should be 1, 0\n\n", ft_isalpha('a'), ft_isalpha('0'));
+//isdigit
+	printf("isdigit:\n input: a, 0\n output: %d, %d\n should be 0, 1\n\n", ft_isdigit('a'), ft_isdigit('0'));
+//isalnum
+	printf("isalnum:\n input: a, 0, -\n output: %d, %d, %d\n should be 1, 1, 0\n\n", ft_isalnum('a'), ft_isalnum('0'), ft_isalnum('-'));
+//isascii
+	printf("isascii:\n input: 'a', '8', 188,'-'\n ouput: %d, %d, %d, %d\n should be 1, 1, 0, 1\n", ft_isascii('a'), ft_isascii('8'), ft_isascii(188), ft_isascii('-'));
+//isprint
+	printf("isprint:\n input: 9 (TAB), 48 ('0'), newline, ' '\n output: %d, %d, %d, %d\n should be 0, 1, 1, 1\n", ft_isprint(9), ft_isprint(48), ft_isprint('\n'), ft_isprint(' '));
+//toupper
 	printf("toupper:\n input: a, A\n result: %c, %c\n should look like A, A\n", ft_toupper('a'), ft_toupper('A'));
+//tolower
 	printf("tolower:\n input: a, A\n result: %c, %c\n should look like a, a\n", ft_tolower('a'), ft_tolower('A'));
 }
