@@ -25,11 +25,11 @@ void	ft_testoddities(void)
 //isalnum
 	printf("isalnum:\n input: a, 0, -\n output: %d, %d, %d\n should be 1, 1, 0\n\n", ft_isalnum('a'), ft_isalnum('0'), ft_isalnum('-'));
 //isascii
-	printf("isascii:\n input: 'a', '8', 188,'-'\n ouput: %d, %d, %d, %d\n should be 1, 1, 0, 1\n", ft_isascii('a'), ft_isascii('8'), ft_isascii(188), ft_isascii('-'));
+	printf("isascii:\n input: 'a', '8', 188,'-'\n ouput: %d, %d, %d, %d\n should be 1, 1, 0, 1\n\n", ft_isascii('a'), ft_isascii('8'), ft_isascii(188), ft_isascii('-'));
 //isprint
-	printf("isprint:\n input: 9 (TAB), 48 ('0'), newline, ' '\n output: %d, %d, %d, %d\n should be 0, 1, 0, 1\n", ft_isprint(9), ft_isprint(48), ft_isprint('\n'), ft_isprint(' '));
+	printf("isprint:\n input: 9 (TAB), 48 ('0'), newline, ' '\n output: %d, %d, %d, %d\n should be 0, 1, 0, 1\n\n", ft_isprint(9), ft_isprint(48), ft_isprint('\n'), ft_isprint(' '));
 //toupper
-	printf("toupper:\n input: a, A\n result: %c, %c\n should look like A, A\n", ft_toupper('a'), ft_toupper('A'));
+	printf("toupper:\n input: a, A\n result: %c, %c\n should look like A, A\n\n", ft_toupper('a'), ft_toupper('A'));
 //tolower
-	printf("tolower:\n input: a, A\n result: %c, %c\n should look like a, a\n", ft_tolower('a'), ft_tolower('A'));
+	printf("tolower:\n input: a, A\n result: %c, %c\n should look like a, a\n\n", ft_tolower('a'), ft_tolower('A'));
 }
