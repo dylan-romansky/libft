@@ -61,7 +61,7 @@ void	ft_teststr1(const char *s, char *t)
 	printf("strcmp: 'fuck', 'fuck':\n %d\n should be 0\n", ft_strcmp("fuck", "fuck"));
 	printf("strcmp: 'fuck', 'fuc':\n %d\n should be 1\n\n", ft_strcmp("fuck", "fuc"));
 //strncmp
-	printf("strncmp: check whole string:\n'fuck', 'fuck':\nstrings same\n %d\n should be 0\n", ft_strncmp("fuck", "fuck", 5));
-	printf(" strings dif\n %d\n defs dif\n", ft_strncmp("fuck", "fuc", 5));
-	printf(" strings dif but stop checkin b4 dif\n %d\n winrar\n\n", ft_strncmp("fuck", "fuc", 3));
+	printf("strncmp: check whole string:\n 'fuck', 'fuck', 5:\n %d\n should be 0\n", ft_strncmp("fuck", "fuck", 5));
+	printf(" strings dif\n 'fuck', 'fuc', 5\n %d\n shouldn't be 0\n", ft_strncmp("fuck", "fuc", 5));
+	printf(" strings dif but stop checkin b4 dif\n 'fuck', 'fuc', 3\n %d\n winrar\n\n", ft_strncmp("fuck", "fuc", 3));
 }
