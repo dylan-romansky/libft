@@ -32,7 +32,6 @@ int		ft_atoi(const char *str)
 			nb = (10 * nb) + (*(str++) - '0');
 		return (nb * neg);
 	}
-	else
-		ft_atoi(str);
-	return (0);
+	nb = ft_atoi(str);
+	return (nb);
 }
