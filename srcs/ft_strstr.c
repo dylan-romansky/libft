@@ -22,7 +22,7 @@ char		*ft_strstr(const char *haystack, const char *needle)
 	{
 		if (*haystack == *needle)
 		{
-			a = ft_strcmp(haystack, needle);
+			a = ft_strncmp(haystack, needle, ft_strlen(needle));
 			if (a == 0)
 				return ((char *)haystack);
 		}
