@@ -17,7 +17,7 @@ void	ft_testoddities(void)
 //atoi
 	printf("atoi:\n positives:\n input: 1234\n result: %d\n", ft_atoi("1234"));
 	printf(" negatives:\n input: -1234\n result: %d\n", ft_atoi("-1234"));
-	printf(" odd cases: input: -0, jag24, 69gds, $()_+- z, jaf-fgs-69420\n results: %d, %d, %d, %d, %d\n", ft_atoi("-0"), ft_atoi("jag24"), ft_atoi("69gds"), ft_atoi("$()_+- z"), ft_atoi("jaf-fgs-69420"));
+	printf(" odd cases: input: -0, jag24, 69gds, $()_+- z, jaf-fgs-69420\n results: %d, %d, %d, %d, %d\n\n", ft_atoi("-0"), ft_atoi("jag24"), ft_atoi("69gds"), ft_atoi("$()_+- z"), ft_atoi("jaf-fgs-69420"));
 //isalpha
 	printf("isalpha:\n input: a, 0\n output: %d, %d\n should be 1, 0\n\n", ft_isalpha('a'), ft_isalpha('0'));
 //isdigit
