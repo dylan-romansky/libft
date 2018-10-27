@@ -35,8 +35,10 @@ void	ft_testmem1(const char *s, char *t)
 	printf("memchr: testing for 9:\n %s\n should be 969\n", (char *)ft_memchr(s, '9', 3));
 	printf("memchr: testing for failure:\n %s\n should be null\n\n", (char *)ft_memchr(s, '1', 5));
 //memcmp
-	printf("memcmp: testing identical:\n result = %d\n should say 0\n", ft_memcmp(s, "6969", 5));
-	printf("memcmp: testing different:\n result = %d\n should say 1\n\n", ft_memcmp(s, "6968", 5));
+	printf("memcmp: testing '6969', '6969':\n result = %d\n should say 0\n", ft_memcmp(s, "6969", 5));
+	printf("memcmp: testing '6969', '6968':\n result = %d\n should say 1\n\n", ft_memcmp(s, "6968", 5));
+	printf("memcmp: testing '6969', '696':\n result = %d\n should say 1\n\n", ft_memcmp(s, "696", 5));
+	printf("memcmp: testing '6969', '698':\n result = %d\n should say 1\n\n", ft_memcmp(s, "698", 5));
 //memcpy
 	printf("memcpy: testing same size copy:\n %s\n should be fuck\n", (char *)ft_memcpy(*test, "fuck", 5));
 	printf("memcpy: testing shorter string\n %s\n should be gay\n", (char *)ft_memcpy(*test, "gay", 4));
