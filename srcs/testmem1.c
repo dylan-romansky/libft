@@ -25,8 +25,9 @@ void	ft_testmem1(const char *s, char *t)
 		printf(" failure...\n");
 	printf("bzero:\n");
 	ft_memset(*test, 'a', 4);
+	printf(" input string: %s\n", *test);
 	ft_bzero(*test, 5);
-	printf(" %s\n should be empty\n", *test);
+	printf(" ouput: %s\n should be empty\n\n", *test);
 //memccpy
 	printf("memccpy: testing for 9\n %s\n should be 69\n", ((char *)ft_memccpy(*test, s, '9', 5) - 2));
 	printf("memccpy: testing for 1:\n%s\n should be null\n%s\n should be 6969\n\n", (char *)ft_memccpy(*test, s, '1', 5), *test);
