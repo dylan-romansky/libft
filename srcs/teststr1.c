@@ -28,9 +28,9 @@ void	ft_teststr1(const char *s, char *t)
 	printf("strcpy: longer\n %s\n does it say fucker or does it just fail?\n", ft_strcpy(*test, "fucker"));
 	printf("strcpy: shorter\n %s\n should say gay\n\n", ft_strcpy(*test, "gay"));
 //strncpy
-	printf("strncpy: same size:\n %s\n does it say fuck?\n", ft_strncpy(*test, "fuck", 4));
-	printf("strncpy: shorter:\n %s\n does it say fu?\n", ft_strncpy(*test, "fuck", 2));
-	printf("strncpy: longer: \n %s\n what happens?\n\n", ft_strncpy(*test, "fucker", 6));
+	printf("strncpy: 'fuck', 4:\n %s\n does it say fuck?\n", ft_strncpy(*test, "fuck", 4));
+	printf("strncpy: 'fuck', 2:\n %s\n should say fu\n", ft_strncpy(*test, "fuck", 2));
+	printf("strncpy: 'fucker', 6:\n %s\n the destination string was 'fuck' so what happens?\n\n", ft_strncpy(*test, "fucker", 6));
 	test2 = (char *)malloc(sizeof(char) * 9);
 	test2 = ft_strcpy(test2, "fuck");
 	test = &test2;
