@@ -17,7 +17,7 @@ char	*ft_strnew(size_t size)
 	char *s;
 
 	s = (char *)malloc(sizeof(size));
-	while (size--)
+	while (--size)
 		*(s++) = '\0';
 	return (s);
 }

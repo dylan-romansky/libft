@@ -20,9 +20,7 @@ void	ft_testmem1(const char *s, char *t)
 	test = &t;
 	write(1, "ft_memalloc:\n", 13);
 	if ((null = ft_memalloc(5)))
-		write(1, " success!\n", 14);
-	else
-		printf(" failure...\n");
+		printf(" address: %p\n", null);
 	printf("bzero:\n");
 	ft_memset(*test, 'a', 4);
 	printf(" input string: %s\n", *test);

@@ -14,27 +14,18 @@
 
 void	ft_testmem2(void)
 {
-	int		*r;
-	int		i;
+	char	*r;
+	char	**s;
 
+//memalloc
 	printf("memalloc: creating string...");
-	if ((r = (int *)ft_memalloc(5)))
-	{
-		printf(" success!\n contents: ");
-		r[0] = 1;
-		r[1] = 2;
-		r[3] = 3;
-		r[4] = 4;
-		i = 0;
-		while (i++ < 4)
-			printf("%d ", r[i]);
-	}
-	else
-		printf(" failure...\n");
-	printf("memdel: deleting string... ");
-	ft_memdel((void *)r);
-	if (!r)
-		printf("success!\n");
-	else
-		printf("failure...\n");
+	r = (char *)ft_memalloc(5);
+	printf(" success!\n writing to string...\n ");
+	s = &r;
+	ft_strcpy(*s, "fuck");
+	printf("contents: %s\n\n", r);
+//memdel
+	printf("memdel: deleting string...\n");
+	ft_memdel((void **)s);
+	printf(" %s\n should be null\n\n", *s);
 }

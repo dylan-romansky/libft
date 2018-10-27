@@ -23,4 +23,5 @@ int		main(void)
 	ft_teststr1(s, test);
 	ft_testoddities();
 	ft_testmem2();
+	ft_teststr2();
 }

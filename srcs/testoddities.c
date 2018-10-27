@@ -27,7 +27,7 @@ void	ft_testoddities(void)
 //isascii
 	printf("isascii:\n input: 'a', '8', 188,'-'\n ouput: %d, %d, %d, %d\n should be 1, 1, 0, 1\n", ft_isascii('a'), ft_isascii('8'), ft_isascii(188), ft_isascii('-'));
 //isprint
-	printf("isprint:\n input: 9 (TAB), 48 ('0'), newline, ' '\n output: %d, %d, %d, %d\n should be 0, 1, 1, 1\n", ft_isprint(9), ft_isprint(48), ft_isprint('\n'), ft_isprint(' '));
+	printf("isprint:\n input: 9 (TAB), 48 ('0'), newline, ' '\n output: %d, %d, %d, %d\n should be 0, 1, 0, 1\n", ft_isprint(9), ft_isprint(48), ft_isprint('\n'), ft_isprint(' '));
 //toupper
 	printf("toupper:\n input: a, A\n result: %c, %c\n should look like A, A\n", ft_toupper('a'), ft_toupper('A'));
 //tolower

@@ -19,5 +19,6 @@ void	ft_testmem1(const char *s, char *t);
 void	ft_teststr1(const char *s, char *t);
 void	ft_testoddities(void);
 void	ft_testmem2(void);
+void	ft_teststr2(void);
 
 #endif
