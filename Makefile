@@ -15,7 +15,7 @@ NAME = libft_test
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Werror -Wextra -I ./includes ./srcs/*.c -o $(NAME)
+	gcc -Wall -Werror -Wextra -I ./includes ./srcs/testfiles/*.c ./srcs/*.c -o $(NAME)
 
 clean:
 	rm -rf $(NAME)
