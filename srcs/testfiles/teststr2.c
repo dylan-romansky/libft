@@ -42,9 +42,7 @@ void		ft_teststr2(void)
 	printf("strnew: making string...  address: %p\n", s);
 	t = &s;
 //strdel
-	ft_memset(*t, 't', 4);
-	printf("writing to string...\n contents: %s", *t);
-	printf("strdel: deleting string '%s'... ", *t);
+	printf("strdel: '%s'...", *t);
 	ft_strdel(t);
 	if (!s)
 		printf("success!\n");
@@ -54,6 +52,7 @@ void		ft_teststr2(void)
 	s = ft_strnew(5);
 	t = &s;
 	ft_memset(*t, 'a', 4);
+	ft_putstr(*t);
 	printf("ft_strclr: clearing string %s... ", s);
 	if (s[0] == '\0')
 		printf("success!\n");
