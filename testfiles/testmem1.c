@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 18:49:36 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/26 17:50:42 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 13:58:22 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,15 @@ void	ft_testmem1(const char *s, char *t)
 	ft_memset(*test, 'a', 4);
 	printf(" input string: %s\n", *test);
 	ft_bzero(*test, 5);
-	printf(" ouput: %s\n should be empty\n\n", *test);
+	printf(" ouput: %s\n should be empty\n", *test);
+	ft_memset(*test, 'a', 4);
+	printf(" input string: %s, 0\n", *test);
+	ft_bzero(*test, 0);
+	printf(" output: %s\n", *test);
+	ft_memset(*test, 'a', 4);
+	printf(" input string: %s, 1\n", *test);
+	ft_bzero(*test, 1);
+	printf(" output: %s\n\n", *test);
 //memccpy
 	printf("memccpy: testing for 9\n %s\n should be 69\n", ((char *)ft_memccpy(*test, s, '9', 5) - 2));
 	printf("memccpy: testing for 1:\n%s\n should be null\n%s\n should be 6969\n\n", (char *)ft_memccpy(*test, s, '1', 5), *test);
