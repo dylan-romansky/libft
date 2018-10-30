@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 14:40:57 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 17:51:38 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 18:46:19 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void		ft_teststr2(void)
 {
 	char	*s;
 	char	**t;
+	int		i = 0;
 
 //strnew
 	s = ft_strnew(5);
@@ -91,10 +92,10 @@ void		ft_teststr2(void)
 //strsplit
 	t = ft_strsplit("white 21 is the maximum fun", ' ');
 	printf("strsplit: 'white 21 is the maximum fun', ' '\n result: ");
-	while (t)
+	while (i < 6)
 	{
 		printf("'%s'", *t);
-		t++;
+		i++;
 	}
 	printf("\n\n");
 }
