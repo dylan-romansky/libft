@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 14:40:57 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 20:07:34 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 20:20:04 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,6 @@ void		ft_teststr2(void)
 		i++;
 	}
 	printf("\n\n");
+//itoa
+	printf("itoa: -210, -0, 0. 210\n results: %s, %s, %s, %s\n\n", ft_itoa(-210), ft_itoa(-0), ft_itoa(0), ft_itoa(210));
 }

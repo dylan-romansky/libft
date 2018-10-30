@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 23:06:12 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 20:13:09 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 20:51:09 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ char			**ft_strsplit(char const *s, char c)
 	lim = (int)ft_wordcount(s, c);
 	if ((n = (char **)malloc(sizeof(char *) * lim)))
 	{
-		write(1, "made array\n", 11);
 		while (s[a] && a < (int)ft_strlen(s) && bee < lim)
 		{
 			a += ft_skipdelim(s, c);

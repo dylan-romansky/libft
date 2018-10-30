@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 16:34:46 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/26 16:04:06 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 20:44:14 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ int		main(void)
 	ft_testoddities();
 	ft_testmem2();
 	ft_teststr2();
+	ft_testoddities2();
 }
