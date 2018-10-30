@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 18:54:28 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/26 18:02:21 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 17:17:37 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ void	ft_teststr1(const char *s, char *t)
 	printf("strnstr: 'pembis', '':\n needle doesn't exist:\n %s\n should be pembis\n\n", ft_strnstr("pembis", "", 4));
 //strcmp
 	printf("strcmp: 'fuck', 'fuck':\n %d\n should be 0\n", ft_strcmp("fuck", "fuck"));
-	printf("strcmp: 'fuck', 'fuc':\n %d\n should be 1\n\n", ft_strcmp("fuck", "fuc"));
+	printf("strcmp: 'fuck', 'fuc':\n %d\n should not be 0\n\n", ft_strcmp("fuck", "fuc"));
 //strncmp
 	printf("strncmp: check whole string:\n 'fuck', 'fuck', 5:\n %d\n should be 0\n", ft_strncmp("fuck", "fuck", 5));
 	printf(" strings dif\n 'fuck', 'fuc', 5\n %d\n shouldn't be 0\n", ft_strncmp("fuck", "fuc", 5));
-	printf(" strings dif but stop checkin b4 dif\n 'fuck', 'fuc', 3\n %d\n winrar\n\n", ft_strncmp("fuck", "fuc", 3));
+	printf(" strings dif but stop checkin b4 dif\n 'fuck', 'fuc', 3\n %d\n should be 0\n\n", ft_strncmp("fuck", "fuc", 3));
 }

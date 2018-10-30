@@ -9,5 +9,4 @@ In the Makefile I have included the commands 'run' and 'rerun'. 'run' automatica
 Currently the included srcs folder contains my .c files from my project. That's cuz I'm still working out bugs.
 Once complete I will have moved those to a separate folder.
 
-Currently there is an issue at the ft_strdel test.
-I'm currently trying to figure out whether that's an issue with my ft_strdel or if it's an issue with the way the test is run. 
+Works all the way up to strsplit
