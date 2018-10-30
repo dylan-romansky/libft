@@ -6,7 +6,7 @@
 #    By: dromansk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 14:53:52 by dromansk          #+#    #+#              #
-#    Updated: 2018/10/30 14:51:10 by dromansk         ###   ########.fr        #
+#    Updated: 2018/10/30 15:44:21 by dromansk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,8 @@ run: all
 
 rerun: re run
 
-testrun:
+test:
 	gcc -Wall -Werror -Wextra -I ./includes ./testfiles/*.c ./my_srcs/*.c -o $(NAME)
 	./$(NAME)
 
-testrerun: clean testrun
+retest: clean test
