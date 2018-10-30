@@ -5,5 +5,6 @@ If it segfaults on you that's an issue with your code, I don't know if there's a
 
 In the Makefile I have included the commands 'run' and 'rerun'. 'run' automatically compiles and runs,
 'rerun' deletes the previously compiled program before recompiling and running.
+There is also a command 'testrun' to run my functions and prove they work.
 
 Currently this only tests the mandatory functions. I do not have it set up yet to run the bonues functions.
