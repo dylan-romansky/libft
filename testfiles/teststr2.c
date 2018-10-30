@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 14:40:57 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 14:07:55 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 14:53:06 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,21 +91,21 @@ void		ft_teststr2(void)
 	printf("strtrim: '  \twhite 21 is the maximum fun\n\t    '\n result: '%s'\n\n", ft_strtrim("  \twhite 21 is the maximum fun\n\t    "));
 //strsplit
 	t = ft_strsplit("white 21 is the maximum fun", ' ');
-	printf("strsplit: 'white 21 is the maximum fun', ' '\n result: ");
+	printf("strsplit: 'white 21 is the maximum fun', ' '\n result:\n");
 	while (i < 7)
 	{
-		printf("'%s'", t[i]);
+		printf("\t'%s'\n", t[i]);
 		i++;
 	}
 	i = 0;
 	t = ft_strsplit("*str*split***isgay*", '*');
-	printf("\nstrsplit: '*str*split***isgay*', '*'\n result: ");
+	printf("\nstrsplit: '*str*split***isgay*', '*'\n result:\n");
 	while (i < 4)
 	{
-		printf("'%s'", t[i]);
+		printf("\t'%s'\n", t[i]);
 		i++;
 	}
-	printf("\n\n");
+	printf("\n");
 //itoa
 	printf("itoa: -210, -0, 0. 210\n results: %s, %s, %s, %s\n\n", ft_itoa(-210), ft_itoa(-0), ft_itoa(0), ft_itoa(210));
 }
