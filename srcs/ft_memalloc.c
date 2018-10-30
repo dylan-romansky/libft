@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 21:12:01 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/24 16:04:27 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 18:09:38 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memalloc(size_t size)
 {
 	void *s;
 
-	s = (void *)malloc(sizeof(size));
+	s = (void *)malloc(size);
 	ft_bzero(s, size);
 	return (s);
 }
