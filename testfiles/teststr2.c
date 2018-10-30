@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 14:40:57 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 14:53:06 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 15:16:42 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ void		ft_teststr2(void)
 		printf("\t'%s'\n", t[i]);
 		i++;
 	}
-	printf("\n");
+	printf("note: putting the delimiter before\nthe first word breaks the first\nstring on some compilers\n\n");
 //itoa
 	printf("itoa: -210, -0, 0. 210\n results: %s, %s, %s, %s\n\n", ft_itoa(-210), ft_itoa(-0), ft_itoa(0), ft_itoa(210));
 }
