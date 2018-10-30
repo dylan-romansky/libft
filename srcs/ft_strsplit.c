@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 23:06:12 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 20:51:09 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 21:23:30 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ char			**ft_strsplit(char const *s, char c)
 				a += (ft_wordlen((s + a), c) + 1);
 			}
 		}
+		n[lim] = NULL;
 		return (n);
 	}
 	return (NULL);
