@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 23:06:12 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 21:23:30 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 13:37:30 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		while (s[a] && a < (int)ft_strlen(s) && bee < lim)
 		{
-			a += ft_skipdelim(s, c);
+			a += ft_skipdelim((s + a), c);
 			if (s[a] && a < (int)ft_strlen(s) && bee < lim)
 			{
 				n[bee] = (char *)malloc(sizeof(char)
@@ -72,7 +72,7 @@ char			**ft_strsplit(char const *s, char c)
 				a += (ft_wordlen((s + a), c) + 1);
 			}
 		}
-		n[lim] = NULL;
+		n[lim] = 0;
 		return (n);
 	}
 	return (NULL);
