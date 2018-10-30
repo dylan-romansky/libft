@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 23:06:12 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 20:00:16 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 20:13:09 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,27 +54,25 @@ char			**ft_strsplit(char const *s, char c)
 	int		a;
 	int		bee;
 	char	**n;
-	int		g;
 	int		lim;
 
 	a = 0;
 	bee = 0;
-	g = ft_strlen(s);
 	lim = (int)ft_wordcount(s, c);
 	if ((n = (char **)malloc(sizeof(char *) * lim)))
 	{
 		write(1, "made array\n", 11);
-		while (s[a] && a < g && bee < lim)
+		while (s[a] && a < (int)ft_strlen(s) && bee < lim)
 		{
 			a += ft_skipdelim(s, c);
-			if (s[a] && a < g && bee < lim)
+			if (s[a] && a < (int)ft_strlen(s) && bee < lim)
 			{
-				n[bee] = (char *)malloc(sizeof(char) * ft_wordlen((s + a), c) + 1);
+				n[bee] = (char *)malloc(sizeof(char)
+						* ft_wordlen((s + a), c) + 1);
 				ft_memcpy(n[bee++], (s + a), (ft_wordlen((s + a), c) + 1));
 				a += (ft_wordlen((s + a), c) + 1);
 			}
 		}
-		n[bee] = NULL;
 		return (n);
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 14:40:57 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 20:00:42 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 20:07:34 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void		ft_teststr2(void)
 //strsplit
 	t = ft_strsplit("white 21 is the maximum fun", ' ');
 	printf("strsplit: 'white 21 is the maximum fun', ' '\n result: ");
-	while (i < 6)
+	while (i < 7)
 	{
 		printf("'%s'", t[i]);
 		i++;

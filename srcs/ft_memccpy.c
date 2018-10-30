@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:50:12 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/26 15:26:41 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 20:04:45 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			return ((void *)ds);
 		}
 	}
-		return (NULL);
+	return (NULL);
 }
