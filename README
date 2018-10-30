@@ -1,12 +1,9 @@
 This is a quick program I've written designed to test all the mandatory functions for the ft_libft project at 42.
-To use simply drop all the .c files for your libft functions into the srcs folder.
+To use simply drop all the .c files for your libft functions into the srcs folder and drop all your .h files into the includes folder.
 It will output information on what tests are being run and the results of those tests.
 If it segfaults on you that's an issue with your code, I don't know if there's a way to make it continue running the other tests after a segfault.
 
 In the Makefile I have included the commands 'run' and 'rerun'. 'run' automatically compiles and runs,
-'rerun' deletest the previously compiled program before recompiling and running.
+'rerun' deletes the previously compiled program before recompiling and running.
 
-Currently the included srcs folder contains my .c files from my project. That's cuz I'm still working out bugs.
-Once complete I will have moved those to a separate folder.
-
-Works all the way up to strsplit
+Currently this only tests the mandatory functions. I do not have it set up yet to run the bonues functions.
