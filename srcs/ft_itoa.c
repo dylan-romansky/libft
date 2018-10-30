@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 00:03:00 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 20:35:04 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/29 21:09:55 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,17 @@ char			*ft_itoa(int n)
 {
 	char	*s;
 	size_t	l;
-	size_t	neg;
 
-	neg = 0;
 	l = ft_numlen(n);
 	if (n < 0)
-	{
-		neg = 1;
-		n = -n;
-	}
-	l += neg;
+		l++;
 	if ((s = (char *)malloc(sizeof(char) * l--)))
 	{
-		if (neg == 1)
+		if (n < 0)
+		{
 			s[0] = '-';
+			n = -n;
+		}
 		s[l--] = '\0';
 		if (n == 0)
 			s[0] = '0';
