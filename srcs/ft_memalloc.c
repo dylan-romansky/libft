@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 16:30:35 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 16:42:07 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/22 21:12:01 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/29 18:09:38 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+void	*ft_memalloc(size_t size)
 {
-	if (alst)
-	{
-		del(*alst->content, *alst->content_size);
-		free(*alst);
-		*alst = NULL;
-	}
+	void *s;
+
+	s = (void *)malloc(size);
+	ft_bzero(s, size);
+	return (s);
 }

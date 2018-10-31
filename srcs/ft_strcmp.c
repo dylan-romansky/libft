@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 16:30:35 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 16:42:07 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/22 20:00:51 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/22 20:02:54 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	if (alst)
+	while (*s1 && *s2)
 	{
-		del(*alst->content, *alst->content_size);
-		free(*alst);
-		*alst = NULL;
+		s1++;
+		s2++;
 	}
+	return (*s1 - *s2);
 }

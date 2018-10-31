@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 16:30:35 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 16:42:07 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/22 18:29:46 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/22 19:03:41 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	if (alst)
+	size_t	n;
+	int		a;
+	int		b;
+
+	n = 0;
+	a = 0;
+	b = 0;
+	while (dst[a])
 	{
-		del(*alst->content, *alst->content_size);
-		free(*alst);
-		*alst = NULL;
+		a++;
+		n++;
 	}
+	while (src[b] && dstsize > 1)
+	{
+		dst[a++] = src[b++];
+		dstsize--;
+		n++;
+	}
+	dst[a] = '\0';
+	return (n);
 }

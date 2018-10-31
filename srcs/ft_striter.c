@@ -1,14 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 12:46:27 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 12:56:00 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/23 15:42:34 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/23 15:44:09 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list		*ft_listnew(void const *content, size_t content_size)
+#include "libft.h"
+
+void	ft_striter(char *s, void (*f)(char *))
 {
+	while (*s)
+	{
+		f(s);
+		s++;
+	}
+}

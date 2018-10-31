@@ -1,33 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 17:04:35 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 17:16:25 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/24 00:03:00 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/29 21:09:55 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+static size_t	ft_numlen(int nb)
 {
-	t_list *n;
-	t_list *l;
+	size_t l;
 
-	l = f(lst);
-	n = l;
-	while (lst->next)
+	l = 1;
+	if (nb == 0)
+		return (2);
+	while (nb)
 	{
-		lst = lst->next;
-		if(!(l->next = f(lst)))
-		{
-			free(l->next);
-			return (NULL);
-		}
-		l = l->next;
+		nb /= 10;
+		l++;
 	}
-	return (n);
+	return (l);
+}
+
+char			*ft_itoa(int n)
+{
+	char	*s;
+	size_t	l;
+
+	l = ft_numlen(n);
+	if (n < 0)
+		l++;
+	if ((s = (char *)malloc(sizeof(char) * l--)))
+	{
+		if (n < 0)
+		{
+			s[0] = '-';
+			n = -n;
+		}
+		s[l--] = '\0';
+		if (n == 0)
+			s[0] = '0';
+		while (n)
+		{
+			s[l--] = (n % 10) + '0';
+			n /= 10;
+		}
+		return (s);
+	}
+	return (NULL);
 }
