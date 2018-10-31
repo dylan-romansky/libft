@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 23:06:12 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 15:34:48 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 19:51:05 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char			**ft_strsplit(char const *s, char c)
 				s++;
 			n[a] = ft_strsub(s, 0, ft_wordlen(s, c));
 			if (n[a] == NULL)
-					return (NULL);
+				return (NULL);
 			s += ft_wordlen(s, c);
 			a++;
 		}
