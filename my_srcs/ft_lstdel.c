@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 12:46:27 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 16:28:52 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/30 16:44:40 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/30 16:54:02 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list		*ft_lstnew(void const *content, size_t content_size)
+void	ft_lstdel(t_list **alst, void(*del)(void*, size_t))
 {
-	t_list	*t;
-
-	if((t = (t_list *)malloc(sizeof(t_list))))
-	{
-		if(content)
-		{
-			t->content = malloc(content_size);
-			t->content = ft_memcpy(t->content, content, content_size);
-			t->content_size = content_size;
-		}
-		else
-		{
-			t->content = NULL;
-			t->content_size = 0;
-		}
-		t->next = NULL;
-		return (t);
-	}
-	return (NULL);
+	if (*alst->next)
+		ft_lstdel(alst->next, del);
+	ft_lstdelone(alst, del);
 }
