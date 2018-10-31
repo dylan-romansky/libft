@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 18:54:28 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 17:17:37 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 20:04:11 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_teststr1(const char *s, char *t)
 //strcpy
 	printf("strcpy: same size\n %s\n should say fuck\n", ft_strcpy(*test, "fuck"));
 	printf("strcpy: longer\n %s\n does it say fucker or does it just fail?\n", ft_strcpy(*test, "fucker"));
-	printf("strcpy: shorter\n %s\n should say gay\n\n", ft_strcpy(*test, "gay"));
+	printf("strcpy: shorter\n %s\n should say lol\n\n", ft_strcpy(*test, "lol"));
 //strncpy
 	printf("strncpy: 'fuck', 4:\n %s\n does it say fuck?\n", ft_strncpy(*test, "fuck", 4));
 	printf("strncpy: 'fuck', 2:\n %s\n should say fu\n", ft_strncpy(*test, "fuck", 2));
