@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 14:40:57 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 15:16:42 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 20:02:55 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,8 @@ void		ft_teststr2(void)
 		i++;
 	}
 	i = 0;
-	t = ft_strsplit("*str*split***isgay*", '*');
-	printf("\nstrsplit: '*str*split***isgay*', '*'\n result:\n");
+	t = ft_strsplit("*str*split***isbad*", '*');
+	printf("\nstrsplit: '*str*split***isbad*', '*'\n result:\n");
 	while (i < 4)
 	{
 		printf("\t'%s'\n", t[i]);

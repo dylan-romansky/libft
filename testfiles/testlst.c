@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 17:26:01 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 17:33:14 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/30 20:01:35 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static void		ft_listchange(t_list *nuts)
 {
-	ft_memset(nuts->content, 'z', nuts->content_size);
+	ft_memset(nuts->content, 'z', (nuts->content_size - 1));
 }
 
 static t_list	*ft_fuckmyass(t_list *bolts)
