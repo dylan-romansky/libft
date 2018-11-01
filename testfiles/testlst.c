@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 17:26:01 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 20:01:35 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/31 13:55:12 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ void			ft_testlst(void)
 //lstdel
 	charmander = &test;
 	ft_lstdelone(charmander, bzero);
-	test = ft_lstnew((void const *)"five whole fucking dicks!", (ft_strlen("five whole fucking dicks!") + 1));
-	test->next = ft_lstnew((void const *)"let's try for six!", (ft_strlen("let's try for six!") + 1));
-	test->next->next = ft_lstnew((void const *)"seven!", (ft_strlen("seven!") + 1));
+	test = ft_lstnew((void const *)"Hello new friend!", (ft_strlen("Hello new friend!") + 1));
+	test->next = ft_lstnew((void const *)"I said hello!", (ft_strlen("I said hello!") + 1));
+	test->next->next = ft_lstnew((void const *)"Ok then :'(", (ft_strlen("Ok then :'(") + 1));
 	printf("lstdel: creating list:\n\t%s\n\t%s\n\t%s\ndeleting...", (char *)test->content, (char *)test->next->content, (char *)test->next->next->content);
 	charmander = &test;
 	ft_lstdel(charmander, ft_bzero);
