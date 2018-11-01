@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 20:36:51 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 21:00:59 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/31 17:08:28 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,13 @@ void	ft_testoddities2(void)
 	ft_putnbr(-69420);
 	write(1, "\n\n", 2);
 //fd
-	write(1, "giving fd 1 cuz if it writes with a variable given there, \nidk why it wouldn't write elsewhere:\n", 96);
-	write(1, "putchar_fd: ", 12);
-	ft_putchar_fd('a', 1);
-	write(1, "\nputstr_fd: ", 12);
-	ft_putstr_fd("fuck my ass", 1);
-	write(1, "\nputendl_fd: ", 13);
-	ft_putendl_fd("fuck my ass", 1);
-	write(1, "putnbr_fd: ", 12);
-	ft_putnbr_fd(69420, 1);
-	write(1, "\n", 1);
+	int fd;
+
+	fd = open("fd_output", O_RDWR);
+	ft_putchar_fd('a', fd);
+	ft_putchar_fd('\n', fd);
+	ft_putstr_fd("fuck my ass\n", fd);
+	ft_putendl_fd("fuck my ass", fd);
+	ft_putnbr_fd(69420, fd);
+	ft_putstr("To check the results of your fd functions,\nCheck the contents of the fd_output file\n\n");
 }

@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 18:51:59 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/30 17:27:14 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/10/31 17:06:26 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define TEST_H
 # include "libft.h"
 # include <stdio.h>
+# include <fcntl.h>
 
 void	ft_testmem1(const char *s, char *t);
 void	ft_teststr1(const char *s, char *t);
