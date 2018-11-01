@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/22 19:55:14 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/23 15:23:23 by dromansk         ###   ########.fr       */
+/*   Created: 2018/10/31 17:37:37 by dromansk          #+#    #+#             */
+/*   Updated: 2018/10/31 19:34:33 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int a;
+	size_t a;
+	size_t b;
 
-	if (*needle == '\0')
+	a = 0;
+	if (*haystack == '\0' && *needle == '\0')
 		return ((char *)haystack);
-	while (*haystack && len)
+	while (a < len && *haystack)
 	{
-		if (*haystack == *needle)
-		{
-			a = ft_strncmp(haystack, needle, len);
-			if (a == 0)
-				return ((char *)haystack);
-		}
-		haystack++;
-		len--;
+		b = 0;
+		while (a + b < len && needle[b] && haystack[a + b] == needle[b])
+			b++;
+		if (!needle[b])
+			return ((char *)haystack + a);
+		a++;
 	}
 	return (NULL);
 }
