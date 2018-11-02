@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 17:52:29 by dromansk          #+#    #+#             */
-/*   Updated: 2018/10/29 17:43:39 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/11/01 17:09:52 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_strtrimlen(char const *str)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (*str == ' ' || *str == '\t' || *str == '\n')
 		str++;
 	while (*str)
@@ -24,7 +24,8 @@ static int	ft_strtrimlen(char const *str)
 		str++;
 		i++;
 	}
-	if (*(str - 1) == ' ' || *(str - 1) == '\n' || *(str - 1) == '\t')
+	if ((*(str - 1) == ' ' || *(str - 1) == '\n' || *(str - 1) == '\t')
+			&& i > 1)
 	{
 		str--;
 		while (*str == ' ' || *str == '\n' || *str == '\t')
@@ -44,14 +45,13 @@ char		*ft_strtrim(char const *s)
 
 	i = ft_strtrimlen(s);
 	p = 0;
-	if ((n = (char *)malloc(sizeof(char) * i)))
-	{
-		while (*s == ' ' || *s == '\n' || *s == '\t')
-			s++;
-		while (i--)
-			n[p++] = *(s++);
-		n[p] = '\0';
-		return (n);
-	}
-	return (NULL);
+	n = (char *)malloc(sizeof(char) * i);
+	if (n == NULL)
+		return (NULL);
+	while (*s == ' ' || *s == '\n' || *s == '\t')
+		s++;
+	while (i-- > 1)
+		n[p++] = *(s++);
+	n[p] = '\0';
+	return (n);
 }
