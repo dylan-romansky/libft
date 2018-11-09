@@ -6,7 +6,7 @@
 #    By: dromansk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 14:53:52 by dromansk          #+#    #+#              #
-#    Updated: 2018/10/31 20:00:18 by dromansk         ###   ########.fr        #
+#    Updated: 2018/11/08 17:27:08 by dromansk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ all: $(NAME)
 
 $(NAME):
 	gcc -Wall -Werror -Wextra -I$(SRCS) -c
-	ar rcs $(NAME) $(O)
+	ar rcsv $(NAME) $(O)
 	ranlib $(NAME)
 
 clean:
