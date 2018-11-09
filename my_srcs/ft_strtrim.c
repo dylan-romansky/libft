@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 17:52:29 by dromansk          #+#    #+#             */
-/*   Updated: 2018/11/01 17:09:52 by dromansk         ###   ########.fr       */
+/*   Updated: 2018/11/08 16:39:07 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char		*ft_strtrim(char const *s)
 	int		i;
 	int		p;
 
+	if (s == NULL)
+		return (NULL);
 	i = ft_strtrimlen(s);
 	p = 0;
 	n = (char *)malloc(sizeof(char) * i);
