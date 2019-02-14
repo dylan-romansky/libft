@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:47:25 by dromansk          #+#    #+#             */
-/*   Updated: 2019/02/03 22:19:04 by dromansk         ###   ########.fr       */
+/*   Updated: 2019/02/14 14:29:05 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,6 @@ char				*ft_strupper(char *s);
 char				*ft_strlower(char *s);
 char				*ft_ftoa(double f, size_t prec);
 char				*ft_lftoa(long double f, size_t prec);
-char				*swap_n_free(char *new, char **old);
 char				*ft_strjoin_len(char const *s1, char const *s2, size_t len1,
 		size_t len2);
 int					ft_isupper(char c);
