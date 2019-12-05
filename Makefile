@@ -6,13 +6,16 @@
 #    By: dromansk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 14:53:52 by dromansk          #+#    #+#              #
-#    Updated: 2019/02/14 14:26:10 by dromansk         ###   ########.fr        #
+#    Updated: 2019/10/01 06:52:48 by dromansk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ./src/*.c
+SRCS = ./src/printf/*.c ./src/printf/conversion/*.c \
+./src/printf/parsing_and_handling/*.c ./src/printf/flags/*.c \
+./src/printf/formatting_and_helpers/*.c ./src/libft/*.c \
+./src/printf/colours/*.c
 
 I = -I ./includes
 
@@ -38,11 +41,20 @@ re: fclean all
 reclean: re
 	make clean
 
+sreclean: fclean
+	gcc -Wall -Werror -Wextra $(I) $(SRCS) -c -g
+	ar rcs $(NAME) $(O)
+	ranlib $(NAME)
+	make clean
+
 compile:
 	gcc main.c $(I) $(L) -o ftest
 
-test: reclean
-	make compile
+scompile:
+	gcc main.c $(I) $(L) -o ftest -g
+
+test: sreclean
+	make scompile
 	./ftest
 
 run: clean
@@ -50,4 +62,4 @@ run: clean
 	./ftest
 
 rm: fclean
-	rm ftest main.c
+	rm -r ftest main.c ftest.dSYM

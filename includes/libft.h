@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:47:25 by dromansk          #+#    #+#             */
-/*   Updated: 2019/02/14 14:29:05 by dromansk         ###   ########.fr       */
+/*   Updated: 2019/12/04 17:34:17 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 # include <stdio.h>
 # include <float.h>
 # include <inttypes.h>
+# include "printf.h"
+
+# define BUFF_SIZE 69420
 
 typedef struct		s_list
 {
@@ -89,8 +92,8 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					chr_index(char *s, int c);
 int					chr_n_index(char *s, int c, size_t len);
 char				*ft_strndup(const char *s1, size_t n);
-int					ft_sqrt(int square);
-int					ft_factorial(int a);
+long double			ft_sqrt(int square, int precision);
+long long			ft_factorial(int a);
 int					ft_permutations(int n, int r);
 char				base_table(int i);
 void				ft_putnbr_base(int value, int base);
@@ -101,9 +104,18 @@ char				*ft_strupper(char *s);
 char				*ft_strlower(char *s);
 char				*ft_ftoa(double f, size_t prec);
 char				*ft_lftoa(long double f, size_t prec);
+char				*swap_n_free(char *new, char **old);
 char				*ft_strjoin_len(char const *s1, char const *s2, size_t len1,
 		size_t len2);
 int					ft_isupper(char c);
 int					ft_islower(char c);
+int					number_length(long long n);
+long long			ft_power(int n, int p);
+void				print_bin(unsigned long n, int size);
+char				*ft_strwht(char *s);
+void				*array_join(void *old, size_t len1, void *add, size_t len2);
+int					ft_new_line(char **s, char **line, int fd, int ret);
+int					get_next_line(const int fd, char **line);
+int					is_numstr(char *s);
 
 #endif
