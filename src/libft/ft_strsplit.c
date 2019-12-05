@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 23:06:12 by dromansk          #+#    #+#             */
-/*   Updated: 2019/12/04 17:47:57 by dromansk         ###   ########.fr       */
+/*   Updated: 2019/12/05 00:06:45 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char			**ft_strsplit(char const *s, char c)
 		{
 			len = wordlen(s, c);
 			tmp = ft_strndup(s, (size_t)len);
-			n = (char **)array_join(n, sizeof(char **) * i, &tmp, sizeof(char **));
+			n = (char **)array_join(n, sizeof(char **) * i, &tmp,
+					sizeof(char **));
 			i++;
 			s += len;
 		}
