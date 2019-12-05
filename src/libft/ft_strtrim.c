@@ -6,7 +6,7 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 17:52:29 by dromansk          #+#    #+#             */
-/*   Updated: 2019/02/14 14:18:21 by dromansk         ###   ########.fr       */
+/*   Updated: 2019/12/05 00:44:35 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char		*ft_strtrim(char const *s)
 	while (*s == ' ' || *s == '\n' || *s == '\t')
 		s++;
 	i = ft_strlen(s) - 1;
+	i = i < 0 ? 0 : i;
 	while (i && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		i--;
 	n = ft_strndup(s, ++i);
