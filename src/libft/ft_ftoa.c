@@ -6,13 +6,13 @@
 /*   By: dromansk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 20:19:02 by dromansk          #+#    #+#             */
-/*   Updated: 2019/03/31 17:50:00 by dromansk         ###   ########.fr       */
+/*   Updated: 2019/12/05 22:28:46 by dromansk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*floatjoin(char **num, char *dec)
+static char			*floatjoin(char **num, char *dec)
 {
 	char	*res;
 
@@ -22,14 +22,14 @@ char		*floatjoin(char **num, char *dec)
 	return (res);
 }
 
-long long	precision(long double dec, size_t prec)
+static long long	precision(long double dec, size_t prec)
 {
 	while (prec--)
 		dec *= 10;
 	return ((long long)(dec + 0.5));
 }
 
-int			nan_comp(double f)
+static int			nan_comp(double f)
 {
 	float		test;
 
@@ -39,7 +39,7 @@ int			nan_comp(double f)
 	return (0);
 }
 
-char		*ft_ftoa(double f, size_t prec)
+char				*ft_ftoa(double f, size_t prec)
 {
 	long long	num;
 	long long	dec;
@@ -47,6 +47,31 @@ char		*ft_ftoa(double f, size_t prec)
 	char		*s;
 
 	if (f > DBL_MAX)
+		return (ft_strdup("inf"));
+	if (nan_comp(f))
+		return (ft_strdup("nan"));
+	num = (long long)f;
+	s = ft_ltoa_base(num, 10);
+	d = f < 0 ? -(f - num) : f - num;
+	dec = precision(d, prec);
+	if (dec)
+	{
+		s = swap_n_free(ft_strjoin(s, "."), &s);
+		if (dec < 0)
+			dec = -dec;
+		s = floatjoin(&s, ft_ltoa_base(dec, 10));
+	}
+	return (s);
+}
+
+char				*ft_lftoa(long double f, size_t prec)
+{
+	long long	num;
+	long long	dec;
+	long double	d;
+	char		*s;
+
+	if (f < LDBL_MIN || f > LDBL_MAX)
 		return (ft_strdup("inf"));
 	if (nan_comp(f))
 		return (ft_strdup("nan"));
