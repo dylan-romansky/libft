@@ -1,0 +1,2 @@
+Maintest reports a free issue with strsplit but I'm not convinced that's not an
+issue with their test
